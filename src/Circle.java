@@ -16,6 +16,16 @@ public class Circle extends Conic {
         return 2 * radius * Math.PI;
     }
 
+    @Override
+    protected boolean congruent(Shape other) {
+        return false;
+    }
+
+    @Override
+    protected int hashi() {
+        return 0;
+    }
+
     public void move(int dx, int dy) {
         center.move(dx, dy);
     }
