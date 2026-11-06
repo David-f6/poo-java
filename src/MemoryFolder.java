@@ -14,7 +14,6 @@ class MemoryFolder extends Folder {
     public void moveShapes(int dx, int dy) {
         super.moveShapes(dx, dy);
         counter.inc();
-
     }
 
     public int getNbMoves() {

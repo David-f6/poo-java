@@ -7,25 +7,27 @@ public class Circle extends Conic {
         this.radius = radius;
     }
 
+    @Override
     public double area() {
         return Math.PI * radius * radius;
     }
 
-
+    @Override
     public double perimeter() {
         return 2 * radius * Math.PI;
     }
 
     @Override
     protected boolean congruent(Shape other) {
-        return false;
+        return Double.compare(radius, ((Circle) other).radius) == 0;
     }
 
     @Override
     protected int hashi() {
-        return 0;
+        return Double.hashCode(radius);
     }
 
+    @Override
     public void move(int dx, int dy) {
         center.move(dx, dy);
     }
