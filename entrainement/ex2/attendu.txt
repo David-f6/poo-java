@@ -1,0 +1,9 @@
+Alice (Salarie) : 2575,00 EUR
+Bob (Freelance) : 2252,50 EUR
+Chloe (Stagiaire) : 650,00 EUR
+Total : 547750
+Erreur : un stagiaire ne peut pas etre augmente
+Erreur : nombre de jours invalide
+Erreur : nom vide
+true
+65000
