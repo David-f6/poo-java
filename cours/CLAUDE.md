@@ -164,3 +164,28 @@ PDF dans ce dossier `cours/` :
 - C1 à C4 : `Cours_1_FR.pdf`, `Cours_2_FR.pdf`, `Cours_3_FR.pdf`, `Cours_4_FR.pdf`
 
 Ce fichier est un résumé. En cas de doute, vérifie dans le PDF, puis dans la Javadoc.
+
+## 8. Mode entraînement au contrôle
+
+David s'entraîne à coder seul, avec la Javadoc pour seule ressource. Les exercices sont dans `entrainement/exN/` : `ENONCE.md`, un `Test*.java` fourni et `attendu.txt` (la sortie exacte). David écrit ses classes dans ce même dossier. Sa progression et ses erreurs récurrentes sont dans `entrainement/PROGRESSION.md` : lis-le en début de séance.
+
+**Corriger un exercice** (commande `/corrige exN`) :
+
+1. Lis `ENONCE.md`, puis les fichiers de David. Ne lis pas d'autre solution, n'en écris pas dans le repo.
+2. Compile et exécute : `javac -d out/exN entrainement/exN/*.java`, puis `java -cp out/exN <ClasseDeTest>`. Compare la sortie à `attendu.txt` ligne par ligne, au caractère près.
+3. Si ça ne compile pas, fais-lui lire la ligne et le message de `javac` : ne corrige pas à sa place.
+4. Réponds dans cet ordre : ce qui est juste, la sortie obtenue face à l'attendu, puis **au plus 3 points**, du plus grave au moins grave. David se perd dans les longues listes : quand il y a beaucoup d'erreurs, ne donne que le point le plus important.
+5. Pour chaque point, applique l'escalade de la section 1 : question, puis page Javadoc, puis indice ciblé, puis exemple sur un autre sujet. Monte d'un cran seulement si la même erreur revient.
+6. Vérifie aussi ce que la sortie ne montre pas : `private`, `final`, `@Override`, signatures exactes, conventions (section 3).
+7. Termine en lui demandant de relancer le test et de te montrer la sortie.
+8. Mets à jour `entrainement/PROGRESSION.md` : acquis, erreurs, notions à retravailler.
+
+Quand la sortie est identique et que la section 3 est respectée, l'exercice est réussi : propose `/exercice`.
+
+**Créer l'exercice suivant** (commande `/exercice`) : suis le plan de `PROGRESSION.md`. Fais réviser une erreur passée dans chaque nouvel exercice. Un exercice = un thème original (pas `Shape`, déjà fait en TD2), des signatures et des messages imposés, un test fourni et une sortie attendue. Vérifie la sortie avec ta propre solution, écrite **hors du repo** (dossier temporaire), que tu supprimes ensuite. Les messages d'erreur restent sans accent, pour éviter les problèmes d'encodage de la console Windows.
+
+**Pièges déjà vus chez David :**
+
+- un `main` en dehors de toute classe : JDK 25 l'accepte, `javac` 21 non. Le `main` va dans la classe de test ;
+- les suggestions d'IntelliJ appliquées sans les comprendre (`static class` de premier niveau, méthode récursive) : demande-lui pourquoi il a écrit la ligne ;
+- du code envoyé sans avoir lancé le test : demande toujours la sortie.

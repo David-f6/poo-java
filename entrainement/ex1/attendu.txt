@@ -1,0 +1,9 @@
+Clavier : 49,90 EUR
+Souris : 19,05 EUR
+true
+false
+true
+Clavier : 44,91 EUR
+Erreur : nom vide
+Erreur : pourcentage hors de [0, 100]
+1905
